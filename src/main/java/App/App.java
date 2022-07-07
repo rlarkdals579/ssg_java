@@ -7,7 +7,7 @@ public class App {
         System.out.println("== 명언 SSG ==");
 
         Scanner sc = new Scanner(System.in);
-        int i = 1;
+        int id = 1;
 
         outer:
         while (true) {
@@ -21,9 +21,16 @@ public class App {
                     String words = sc.nextLine().trim();
                     System.out.print("작가 : ");
                     String author = sc.nextLine().trim();
-                    System.out.println(i + "번 글이 등록되었습니다.");
+                    System.out.println(id + "번 명언이 등록되었습니다.");
+
+                    Saying saying = new Saying(id, words, author);
+//                    System.out.println(saying);
+
+                case "목록":
+                    System.out.println("번호 / 작가 / 명언");
+
             }
-            i++;
+            id++;
         }
         sc.close();
     }
