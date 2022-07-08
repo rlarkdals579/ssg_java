@@ -38,8 +38,7 @@ public class App {
     public void run() {
         System.out.println("== 명언 SSG ==");
 
-        ArrayList<String> data_words = new ArrayList<>();
-        ArrayList<String> data_author = new ArrayList<>();
+        ArrayList<Saying> sayingArrayList = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
         int id = 1;
@@ -54,18 +53,22 @@ public class App {
                 case "등록":
                     System.out.print("명언 : ");
                     String words = sc.nextLine().trim();
-                    data_words.add(words);
 
                     System.out.print("작가 : ");
                     String author = sc.nextLine().trim();
-                    data_author.add(author);
 
                     System.out.println(id + "번 명언이 등록됐습니다.");
                     Saying saying = new Saying(id, words, author);
+                    sayingArrayList.add(saying);
+                    break;
 
                 case "목록":
-                    System.out.println("   번호   /   작가   /   명언   ");
+                    System.out.println("번호 /   작가   /   명언   ");
                     System.out.println("------------------------------");
+                    for(int i = sayingArrayList.size()-1; i>= 0; i--){
+                        Saying saying1 = sayingArrayList.get(i);
+                        System.out.printf("%d   /    %s    /   %s\n",
+                                saying1.id, saying1.words, saying1.author);                    }
 
             }
             id++;
