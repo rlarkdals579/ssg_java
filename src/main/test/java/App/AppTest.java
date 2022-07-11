@@ -51,6 +51,7 @@ public class AppTest {
 
 
     @Test
+    @DisplayName("삭제 테스트")
     public void Rq__getIntParam() {
         Request rq = new Request("삭제?id=1");
 

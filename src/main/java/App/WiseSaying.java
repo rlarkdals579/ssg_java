@@ -1,13 +1,13 @@
 package App;
 
-public class Saying {
+public class WiseSaying {
     int id;
-    String words;
+    String content;
     String author;
 
-    public Saying(int id, String words, String author) {
+    public WiseSaying(int id, String content, String author) {
         this.id = id;
-        this.words = words;
+        this.content = content;
         this.author = author;
     }
 
@@ -15,7 +15,7 @@ public class Saying {
     public String toString() {
         return "Saying{" +
                 "id=" + id +
-                ", words='" + words + '\'' +
+                ", words='" + content + '\'' +
                 ", author='" + author + '\'' +
                 '}';
     }
