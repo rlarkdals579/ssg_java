@@ -69,6 +69,15 @@ public class AppTest {
         assertEquals(10, id);
         assertEquals(1, no);
     }
+
+    @Test
+    public void Rq__getPath() {
+        Request rq = new Request("삭제?id=1");
+
+        String path = rq.getPath();
+
+        assertEquals("삭제", path);
+    }
 }
 
 
