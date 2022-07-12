@@ -12,6 +12,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AppTest {
 
     @Test
+    @DisplayName("파일에 내용쓰기")
+    void writedownToFileTest(){
+        Util.mkdir("test_data");
+        Util.saveToFile("test_data/1.json", "내용들");
+    }
+
+    @Test
     @DisplayName("스캐너 인풋 테스트")
     public void ScannerInputTest() {
         String input = """
